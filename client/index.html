@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robot" content="index, follow">
+    <meta name="description" content="Layout basico no flex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Subir archivo y generar gráfico</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <main>
+        
+        <header>
+            <nav>
+                <div>
+                    <h1>Resilience AI</h1>
+                    <h2>Where algorithms evolve through challenges, turning obstacles into opportunities to thrive and secure your financial future.</h2>
+                </div>
+
+                <button>Finances y Tech</button>
+            </nav>
+        </header>
+
+        <section>
+            <article>
+
+                <div class="card ">
+                    <h3>Economic History</h3>
+                    <!-- <div class="graph-container">
+                        <figure>
+                            <img src="conceptGraph.jpeg" alt="">
+                        </figure>
+                    </div> -->
+                    <div id="chart" class="chart-container"></div>
+
+                    <div class="plan-list-container">
+
+                        <div>
+                            <select id="miSelect" class="select" name="opciones-ahorro">
+                                <option value="">-- Choose an Option --</option>
+                                <option value="fondo-emergencia">Emergency fund</option>
+                                <option value="meta-ahorro">Savings goal</option>
+                            </select>
+                            
+                            <input class="goal" type="number" name="hy" placeholder="Enter quantity">
+                        </div>
+                        
+                        <button class="miBoton" onclick="
+                            createPlan();
+                        ">Get An Analisis From An AI</button>
+
+                    </div>
+
+                    <div class="p-separator" >
+                        Based on your data, we project ~$25,000 in savings within 6 months at your current rate.
+                        Moderate risk: Unexpected spending fluctuations (+5-10%) could delay the goal by 1-2 months. We recommend reallocating 8% from flexible categories (entertainment/subscriptions) and automating monthly deposits.
+                        Your discipline + our adaptive AI make this achievable!
+                    </div>
+                    
+                    
+                     <!-- <input type="file" id="csvFile" accept=".csv" /> -->
+                </div>
+
+            </article>
+        </section>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/4.5.0/apexcharts.min.js"></script>
+    <script src="interactive.js"></script>
+    <script src="index.js"></script>
+
+    <!-- Footer -->
+    <footer>
+        <section class="aboutUs-container">
+            <p>ApexCharts™
+                Copyright (с) 2025 ApexCharts, Inc. https://www.apexcharts.com/</p>
+        </section>
+     </footer>
+</body>
+</html>

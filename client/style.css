@@ -1,0 +1,369 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --fireEngineRed: #c1292e;
+  --raisingBlack: #161925;
+  --babyPowder: #fdfffc;
+  --slateGray: #7a8b99;
+  --slateGrayDarker: #6f7d8c;
+  --ghostWhite: #f8f7ff;
+  --onyx: #32373b;
+  --outerSpace: #4a5859;
+  --paleDogwood: #f4d6cc;
+  --hunyadiYellow: #f4b860;
+  --bittersweetShimmer: #c83e4d;
+  --googleIconColor: #e8eaed;
+  --textColorReference: #414856;
+
+  --chillBlack: rgb(25, 25, 25);
+
+  --capitaloneblue: #183a79;
+  --capitalonered: #d40000;
+
+  --lovableBlue: #1EAEDB;
+  --lovableOceanBLue: #0EA5E9;
+  --lovableRed: #ea384c;
+
+  --mypurple: rgb(112, 44, 236);
+
+  --myGay: #4b4b4b;
+
+}
+
+body {
+  background: linear-gradient(
+    to bottom right,
+    color-mix(in srgb,
+      var(--lovableBlue) 20%,
+      white 100%) 20%,
+
+    white 50%,
+
+    color-mix(in srgb,
+    var(--lovableRed) 20%,
+    white) 100%
+  );
+}
+
+body main {
+  height: 100vh;
+  height: fit-content;
+
+
+}
+
+header {
+  width: 100vw;
+  height: 15rem;
+  /* background-color: var(--googleIconColor); */
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  width: 80%;
+  /* background-color: var(--ghostWhite); */
+  height: 12rem;
+  position: relative;
+}
+
+nav div {
+  width: 70%;
+  position: absolute;
+}
+
+/* Desplazamiento desde la izquierda */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+nav h1 {
+  font-size: 6rem;
+  font-weight: bold;
+
+  color: var(--lovableRed);
+
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+nav h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: var(--myGay);
+
+  animation: slideInLeft 1.5s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(+100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+nav button {
+  position: absolute;
+  right: 0;
+  padding: 1rem 1rem;
+  font-size: 2.5;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 2rem;
+  height: calc(fit-content + 12rem);
+
+  background: linear-gradient(
+    to bottom right,
+    color-mix(in srgb,
+      var(--lovableBlue) 100%,
+      black 10%) 20%,
+
+    var(--mypurple) 50%,
+
+    color-mix(in srgb,
+    var(--lovableRed) 100%,
+    black 10%) 100%
+  );
+
+  color: var(--ghostWhite);
+  font-weight: bold;
+
+  animation: slideInRight 1.5s ease-out forwards;
+}
+
+section {
+  width: 100vw;
+  height: fit-content;
+  /* background-color: var(--googleIconColor); */
+
+}
+
+article {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.chart-container {
+  width: 100%;
+}
+
+@keyframes growHeight {
+  from {
+    transform: translateY(+100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.card {
+  width: 80%;
+  height: fit-content;
+  /* max-height: 55rem; */
+  /* background-color: var(--ghostWhite); */
+  background: linear-gradient(
+    to bottom right,
+    color-mix(in srgb,
+      var(--lovableBlue) 20%,
+      white 100%) 20%,
+
+    white 50%,
+
+    color-mix(in srgb,
+    var(--lovableRed) 20%,
+    white) 100%
+  );
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+
+  border: color-mix(in srgb, var(--lovableRed) 50%, white 100%) solid 0.01rem;
+
+  animation: growHeight 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.card h3 {
+  font-size: 5rem;
+  color: var(--lovableBlue);
+
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+
+
+.card .graph-container {
+  width: 95%;
+  min-height: 6rem;
+  height: fit-content;
+  max-height: 30rem;
+  background-color: color-mix(in srgb,
+                    var(--lovableBlue) 10%,
+                    white 10%);
+  border-radius: 2rem;
+  margin: 2rem;
+  overflow: hidden;
+}
+
+.graph-container figure {
+  width: 100%;
+  height: 100%;
+  max-height: 30rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.graph-container figure img {
+  width: 100%; 
+  height: 100%; 
+  max-height: 30rem;
+  object-fit: contain;  
+  object-position: center;
+  
+}
+
+.card p,
+footer p {
+  color: var(--myGay);
+  font-size: 1.5rem;
+}
+
+.card p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* footer */
+
+footer {
+  width: 100vw;
+  height: fit-content;
+}
+
+footer p {
+  text-align: center;
+  padding: 3rem;
+}
+
+/* para promt */
+
+.plan-list-container {
+  width: 95%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.plan-list-container div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+}
+
+.plan-list-container button {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  border: none;
+  margin: 1.2rem;
+
+  background: linear-gradient(
+    to bottom right,
+    color-mix(in srgb,
+      var(--lovableBlue) 100%,
+      black 5%) 20%,
+
+    var(--mypurple) 50%,
+
+    color-mix(in srgb,
+    var(--lovableRed) 100%,
+    black 10%) 80%
+  );
+}
+
+.plan-list-container select {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  border: none;
+  background: color-mix(in srgb, var(--lovableBlue) 25%, white 100%);
+  color: var(--myGay);
+  font-weight: bold;
+}
+
+.plan-list-container .goal {
+  padding: 1rem 1.5rem;
+  background: color-mix(in srgb, var(--lovableRed) 25%, white 100%);
+  color: var(--myGay);
+  font-weight: bold;
+  border: none;
+}
+
+.plan-list-container button {
+  color: var(--ghostWhite);
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+
+
+@keyframes pop {
+  from { opacity: 0;
+  display: none; }
+  to { opacity: 1; 
+  display: inline;}
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 400ch } /* 30 caracteres (ajusta según tu texto) */
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 400ch } /* 30 caracteres (ajusta según tu texto) */
+}
+
+.p-separator {
+  display: none;
+
+  font-size: 2.2rem;
+  animation: pop 8s ease-in-out forwards;
+  /* animation: typing 4.5s ease-out forwards; */
+    /* animation: typing 3s steps(30, end) forwards,
+    blink 0.5s step-end infinite; */
+}
